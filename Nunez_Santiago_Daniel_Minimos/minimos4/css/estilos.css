@@ -1,0 +1,18 @@
+body{
+  font-family: sans-serif;
+}
+
+.ok{
+  background-color: green;
+}
+.ok:before{
+  content: 'OK: '
+}
+
+.nok{
+  background-color: red;
+  color: white;
+}
+.nok:before{
+  content: 'NOK: '
+}

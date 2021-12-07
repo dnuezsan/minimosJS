@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=es dir=ltr>
+
+<head>
+  <meta charset=utf-8 />
+  <meta http-equiv=X-UA-Compatible content='IE=edge' />
+  <meta name=viewport content='width=device-width, initial-scale=1' />
+  <meta name=author content=mjaque@migueljaque.com />
+  <meta name=description content='Mínimos de UD 5' />
+  <meta name=keywords content='Desarrollo Web en Entorno Cliente' />
+  <title>Mínimos de UD-5</title>
+
+  <link rel=stylesheet href=css/estilos.css />
+</head>
+
+<body>
+  <h1>Mínimos de UD-5</h1>
+  <p>En esta prueba debes demostrar que "desarrollas aplicaciones web interactivas integrando mecanismos de manejo de eventos".</p>
+  <p>En concreto debes:</p>
+  <ol>
+    <li>Reconocer las posibilidades del lenguaje de marcas relativas a la captura de los eventos producidos.</li>
+    <li>Identificar las características del lenguaje de programación relativas a la gestión de los eventos.</li>
+    <li>Diferenciar los tipos de eventos que se pueden manejar.</li>
+    <li>Crear un código que capture y utilice eventos.</li>
+    <li>Reconocer las capacidades del lenguaje relativas a la gestión de formularios web.</li>
+    <li>Validar formularios web utilizando eventos.</li>
+    <li>Utilizar expresiones regulares para facilitar los procedimientos de validación.</li>
+    <li>Depurar y documentar el código.</li>
+    <li>Gestionar cookies en el cliente.</li>
+  </ol>
+
+  <h2 id=ej1>Ejercicio 1</h2>
+  <p>Implementa el código necesario en la función "iniciar" para detectar los siguientes eventos sobre el campo de texto</p>
+  <p><input type=text id=iEj1 value='Valor Inicial' /></p>
+  <ul>
+    <li>Al cambiar el valor del campo de texto, llama a la función "registrar" con el valor 1.</li>
+    <li>Al poner el foco en el campo de texto, llama a la función "registrar" con el valor 2.</li>
+    <li>Al pasar el ratón sobre en el campo de texto, llama a la función "registrar" con el valor 3.</li>
+    <li>Al hacer click en el campo de texto, llama a la función "registrar" con el valor 4.</li>
+  </ul>
+
+  <h2 id=ej2>Ejercicio 2</h2>
+  <p>Implementa el código necesario para validar el siguiente formulario:</p>
+  <form>
+    <h3 id=ej21>Ejercicio 2.1</h3>
+    <p>Valida, mediante el atributo "pattern" de HTML, que el campo de texto solo admita textos de entre 3 y 5 letras de la A a la Z (solo mayúsculas)</p>
+    <p>
+      <label for=iTexto>Texto:</label>
+      <input type=text id=iTexto pattern="^[A-Z]{3,5}$"/>
+    </p>
+
+    <h3 id=ej22>Ejercicio 2.2</h3>
+    <p>Comprueba cuando se envíe el formulario, que se ha elegido una opción con valor no nulo. Si el campo fuera nulo, impide el envío del formulario.</p>
+    <p>
+      <label for=sLista>Lista: </label>
+      <select id=sLista>
+        <option> </option>
+        <option value=1>Valor 1</option>
+        <option value=2>Valor 2</option>
+      </select>
+    </p>
+
+    <p>
+      <h3 id=ej23>Ejercicio 2.3</h3>
+      <p>Comprueba, cuando cualquiera de los campos de fecha pierda el foco, su fecha corresponda a este año. Si no fuera así, pon en el campo la fecha de hoy.</p>
+      <input type=date id=iF1 /><input type=date id=iF2 />
+    </p>
+    <button type=submit>Enviar</button>
+  </form>
+
+  <h2 id=ej3>Ejercicio 3</h2>
+  <p>Crea la función "gestionarCookie" que comprobará si el cliente tiene una cookie de nombre "cookie1". Si la tuviera, la función devolverá su valor. Si no la tuviera, creará la cookie con el valor "Valor 1".</p>
+  <p>Llama a "gestionarCookie" al final de la función "iniciar".</p>
+
+  <h2 id=ej4>Ejercicio 4</h2>
+  <p>Documenta correctamente (conforme a JSDoc) todas las funciones, clases y métodos creados.</p>
+  <p>Antes de entregar comprueba que tu código funciona correctamente y no tiene errores.</p>
+
+  <script src=js/codigo.js></script>
+  <script src=js/test.js></script>
+</body>
+
+</html>

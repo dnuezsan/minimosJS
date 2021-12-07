@@ -1,0 +1,35 @@
+body{
+  font-family: sans-serif;
+}
+
+.ok{
+  background-color: green;
+}
+.ok:before{
+  content: 'OK: '
+}
+
+.nok{
+  background-color: red;
+  color: white;
+}
+.nok:before{
+  content: 'NOK: '
+}
+
+div{
+    border: 2px dashed blue;
+    padding: 1em;
+    width: 80%;
+}
+
+.rojo{
+  background-color: red;
+}
+.verde{
+  background-color: green;
+}
+.bonito{
+  color: blue;
+  font-style: italic;
+}

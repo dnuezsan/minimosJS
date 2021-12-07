@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang=es dir=ltr>
+
+<head>
+  <meta charset=utf-8 />
+  <meta http-equiv=X-UA-Compatible content='IE=edge' />
+  <meta name=viewport content='width=device-width, initial-scale=1' />
+  <meta name=author content=mjaque@migueljaque.com />
+  <meta name=description content='Mínimos de UD 6' />
+  <meta name=keywords content='Desarrollo Web en Entorno Cliente' />
+  <title>Mínimos de UD-6</title>
+
+  <link rel=stylesheet href=css/estilos.css />
+</head>
+
+<body>
+  <h1>Mínimos de UD-6</h1>
+  <p>En esta prueba debes demostrar que "desarrollas aplicaciones web analizando y aplicando las características del modelo de objetos del documento".</p>
+  <p>En concreto debes:</p>
+  <ol>
+    <li>Reconocer el modelo de objetos del documento de una página web.</li>
+    <li>Identificar los objetos del modelo, sus propiedades y métodos.</li>
+    <li>Crear y verificar un código que acceda a la estructura del documento.</li>
+    <li>Crear nuevos elementos de la estructura y modificar elementos ya existentes.</li>
+    <li>Asociar acciones a los eventos del modelo.</li>
+    <li>Independizar las tres facetas (contenido, aspecto y comportamiento), en aplicaciones web.</li>
+  </ol>
+
+  <h2 id=ej11>Ejercicio 1.1</h2>
+  <p>Implementa el código necesario en la función "comprobarE11" para que devuelva el valor del atributo width del campo de texto.</p>
+  <p><input type=text id=iEj11 width=42 value='Valor Inicial' /></p>
+
+  <h2 id=ej12>Ejercicio 1.2</h2>
+  <p>Implementa el código necesario en la función "cambiarE12" para que establezca la anchura del campo de texto a 37.</p>
+  <p><input type=text id=iEj12 width=42 value='Valor Inicial' /></p>
+
+  <h2 id=ej13>Ejercicio 1.3</h2>
+  <p>Implementa el código necesario en la función "buscarE13" para que devuelva el value del tercer campo numérico. No pongas atributos id.</p>
+  <p><input type=number value=11 /><input type=number value=22 /><input type=number value=33 /></p>
+
+  <h2 id=ej14>Ejercicio 1.4</h2>
+  <p>Implementa el código necesario en la función "cambiarE14" para que establezca el color de fondo del div a rojo.</p>
+  <div id=div14>Div 1.4</div>
+
+  <h2 id=ej15>Ejercicio 1.5</h2>
+  <p>Implementa el código necesario en la función "cambiarE15" para que cambiar la clase del div de rojo a verde. No pongas atributo id.</p>
+  <div class=rojo>Div 1.5</div>
+
+  <h2 id=ej2.1>Ejercicio 2.1</h2>
+  <p>Implementa una funcion "crearSelect" que cree un select con las opciones "JavaScript" y "ECMA". La primera tendrá el valor 1 y la segunda tendrá el valor 2. El select debe crearse dentro del div2</p>
+  <div id=div21>Div 2.1</div>
+
+  <h2 id=ej2.2>Ejercicio 2.2</h2>
+  <p>Implementa una funcion "crearP" que cree un que cree un párrafo con el texto "Brendan Eich creó JavaScript", con la clase "bonito", dentro del div2 y que se coloque ANTES que el select anterior.</p>
+
+  <h2 id=ej3.1>Ejercicio 3.1</h2>
+  <p>Asocia los siguientes eventos al div31.</p>
+  <ul>
+    <li>Click: Al hacer click sobre el div3 debe aparecer en él el texto "CLICK".</li>
+    <li>mouse over: Al pasar el ratón sobre el div3 debe aparecer en él el texto "MOUSEOVER".</li>
+    <li>Doble click: Al hacer doble click sobre el div3 debe aparecer en él el texto "DOUBLECLICK".</li>
+    <li>mouse out: Al sacar el ratón del div3 debe aparecer en él el texto "MOUSEOUT".</li>
+  </ul>
+  <div id=div31>Div 3.1</div>
+
+  <h2 id=ej4.1>Ejercicio 4.1</h2>
+  <p>Crea las siguientes clases (puedes crear métodos adicionales si lo consideras necesario):</p>
+  <ul>
+    <li>Controlador: con los siguientes métodos:
+      <ul>
+        <li>constructor: inicializará dos atributos:
+          <ul>
+            <li>vista: de tipo Vista.</li>
+            <li>modelo: de tipo Modelo.</li>
+          </ul>
+        </li>
+        <li>cambiar: Llamará al método "getDatos" del modelo y pasará los datos recibidos al método "mostrarDatos" de la vista.</li>
+      </ul>
+    </li>
+    <li>Vista: con los siguientes métodos:
+      <ul>
+        <li>constructor: creará dentro del div41 un botón y un div. Asociará el click del botón con el método cambiar del controlador.</li>
+        <li>mostrarDatos: recibirá un texto como parámetro y lo añadirá el div.</li>
+      </ul>
+    </li>
+    <li>Modelo: con los siguientes métodos:
+      <ul>
+        <li>constructor: creará un atributo "datos" y le asignará el valor "MVC es un patrón de diseño"</li>
+        <li>getDatos: devolverá el valor del atributo datos.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><button onclick="new Controlador()">Crear MVC</button></p>
+  <div id=div41>Div 4.1</div>
+
+  <script src=js/codigo.js></script>
+  <script src=js/test.js></script>
+</body>
+
+</html>
